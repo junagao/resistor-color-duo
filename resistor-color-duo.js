@@ -1,4 +1,8 @@
 export const value = (colors) => {
   const COLORS = ['black', 'brown', 'red', 'orange', 'yellow', 'green', 'blue', 'violet', 'grey', 'white'];
-  return parseInt(COLORS.indexOf(colors[0]).toString() + COLORS.indexOf(colors[1]).toString());
+  let result = '';
+  for (let color of colors) {
+    result += COLORS.indexOf(color).toString();
+  }
+  return parseInt(result);
 };
